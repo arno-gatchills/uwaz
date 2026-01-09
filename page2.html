@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>She Said Yes 💕</title>
+<style>
+body{margin:0;font-family:'Poppins',Arial;color:white;overflow:hidden;}
+.video-bg{position:fixed;inset:0;z-index:-2;}
+.video-bg video{width:100%;height:100%;object-fit:cover;}
+.overlay{position:fixed;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.3),rgba(0,0,0,.75) 80%);z-index:-1;}
+h1{text-align:center;margin-top:20px;font-size:clamp(26px,6vw,36px);}
+.love-letter{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,.45);padding:18px 22px;border-radius:16px;max-width:620px;line-height:1.55;transition:opacity 2.5s ease;}
+.love-letter.fade{opacity:0;}
+.spotify-glass{position:fixed;left:50%;top:65vh;transform:translateX(-50%);width:min(420px,92%);background:rgba(0,0,0,.28);backdrop-filter:blur(10px);padding:12px;border-radius:18px;box-shadow:0 12px 35px rgba(0,0,0,.4);transition:opacity 1.2s ease,transform 1.2s ease;}
+.spotify-glass.hidden{opacity:0;transform:translate(-50%,20px);pointer-events:none;}
+</style>
+</head>
+<body>
+
+<div class="video-bg">
+<video autoplay muted loop playsinline preload="metadata">
+ <source src="2e38b0a75598e4ffca031f99a70db925.mp4" type="video/mp4">
+</video>
+</div>
+<div class="overlay"></div>
+
+<h1>She said YES 😍</h1>
+
+<div class="love-letter" id="letter">
+💌 Sasha, from the moment I met you everything felt softer, warmer, happier.
+Thank you for saying yes 💖
+</div>
+
+<div class="spotify-glass" id="spotify">
+<iframe src="https://open.spotify.com/embed/track/77IpBzH1EuhWwIC6KBZ5rj?theme=0&autoplay=1"
+ width="100%" height="152"
+ allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+</iframe>
+</div>
+
+<script>
+setTimeout(()=>document.getElementById("letter").classList.add("fade"),15000);
+const spotify=document.getElementById("spotify");
+spotify.addEventListener("click",()=>spotify.classList.add("hidden"));
+</script>
+
+</body>
+</html>

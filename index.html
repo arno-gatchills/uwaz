@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sasha Proposal</title>
+<style>
+body{margin:0;font-family:'Poppins',Arial;color:white;overflow:hidden;}
+.video-bg{position:fixed;inset:0;z-index:-2;}
+.video-bg video{width:100%;height:100%;object-fit:cover;}
+.overlay{position:fixed;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.3),rgba(0,0,0,.6));z-index:-1;}
+.container{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;}
+h1{font-size:clamp(26px,6vw,36px);margin-bottom:25px;}
+button{padding:14px 26px;margin:8px;border:none;border-radius:12px;font-size:18px;cursor:pointer;transition:.3s;}
+.yes{background:#00ffaa;color:#003b2c;font-weight:600;}
+.no{background:#ff2f5e;color:white;font-weight:600;}
+button:hover{transform:scale(1.12)}
+.fade-out{opacity:0;transition:opacity 1.2s ease;}
+</style>
+</head>
+<body>
+
+<div class="video-bg">
+<video autoplay muted loop playsinline preload="metadata">
+ <source src="2026-01-09-172514803_20260109_172816.mp4" type="video/mp4">
+</video>
+</div>
+<div class="overlay"></div>
+
+<div class="container">
+<h1>Hey Sasha… will you be my girlfriend? 💖</h1>
+<button class="yes" onclick="go()">HECK YES!!</button>
+<button class="no">naah</button>
+</div>
+
+<script>
+function go(){
+ document.body.classList.add("fade-out");
+ setTimeout(()=>location.href="page2.html",1200);
+}
+</script>
+</body>
+</html>
